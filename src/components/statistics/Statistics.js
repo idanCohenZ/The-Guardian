@@ -41,7 +41,7 @@ function Statistics() {
                   Users Online{" "}
                 </div>
                 <div class="circle-tile-number text-faded ">10</div>
-                <a class="circle-tile-footer" href="#">
+                <a className="circle-tile-footer" href="#">
                   More Info <i class="fa fa-chevron-circle-right"></i>
                 </a>
               </div>

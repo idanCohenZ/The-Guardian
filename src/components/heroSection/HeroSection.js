@@ -11,7 +11,7 @@ function HeroSection() {
       <p>What are you waiting for?</p>
       <div className="hero-btns">
         <Link to="/login">
-          <Button variant="outline-light" onClick={console.log("hey")}>
+          <Button variant="outline-light" onClick={() => console.log("hey")}>
             GET STARTED
           </Button>
         </Link>
