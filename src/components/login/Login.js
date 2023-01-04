@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+// import { getToken } from "../../utils/https";
 
 function Login() {
   const [user, setUser] = useState({
@@ -10,6 +11,8 @@ function Login() {
   });
 
   const handleClick = () => {
+    // const res = getToken();
+    // console.log(res);
     console.log(user);
   };
 

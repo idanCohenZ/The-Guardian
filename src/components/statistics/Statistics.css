@@ -1,5 +1,12 @@
+.row-container {
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
 .circle-tile {
-  /* margin-top: 55px; */
+  margin-top: 50%;
+
+  /* left: 50%; */
   margin-bottom: 15px;
   text-align: center;
 }

@@ -8,9 +8,11 @@ import "./NavBar.css";
 function ColorSchemesExample() {
   return (
     <>
-      <Navbar bg="primary" variant="dark" fixed="top">
+      <Navbar bg="dark" variant="dark" fixed="top">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Link to="/">
+            <Navbar.Brand href="#home">GUARDIEN</Navbar.Brand>
+          </Link>
           <Nav className="me-auto">
             <Link to="/">
               <Nav.Link href="#home">Home</Nav.Link>

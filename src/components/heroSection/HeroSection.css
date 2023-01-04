@@ -21,7 +21,25 @@ video {
 .hero-container > h1 {
   color: #fff;
   font-size: 100px;
-  margin-top: -100px;
+  /* margin-top: -100px; */
+}
+
+.test-it-btn {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 50px;
+  font-family: "Slabo 27px", serif;
+}
+
+.test-it-btn:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s ease all;
+  border: 1px solid black;
 }
 
 .hero-container > p {
