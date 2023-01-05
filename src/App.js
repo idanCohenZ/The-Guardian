@@ -1,21 +1,30 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/navbar/NavBar";
 import Home from "./pages/Home";
 import Result from "./pages/Result";
 import Signin from "./pages/Signin";
+import LoginContext from "./context/LoginContext";
 
 function App() {
+  const [username, setUsername] = useState("");
+  const [signed, setSigned] = useState(false);
+
   return (
     <>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="login" element={<Signin />} />
-          <Route path="result" element={<Result />} />
-        </Routes>
-      </Router>
+      <LoginContext.Provider
+        value={{ setSigned, signed: signed, setUsername, username: username }}
+      >
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="login" element={<Signin />} />
+            <Route path="result" element={<Result />} />
+          </Routes>
+        </Router>
+      </LoginContext.Provider>
     </>
   );
 }

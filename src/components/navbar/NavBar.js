@@ -3,27 +3,52 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import LoginContext from "../../context/LoginContext";
 import "./NavBar.css";
 
 function ColorSchemesExample() {
+  const { signed, setSigned, username } = useContext(LoginContext);
   return (
     <>
       <Navbar bg="dark" variant="dark" fixed="top">
         <Container>
-          <Link to="/">
-            <Navbar.Brand href="#home">GUARDIEN</Navbar.Brand>
+          <Link to="/" className="nav-link">
+            <Navbar.Brand href="#home">
+              <img
+                src="/images/logo.jpg"
+                className="navbar-logo"
+                alt="logo.jpg"
+              />
+              GUARDIEN
+            </Navbar.Brand>
           </Link>
           <Nav className="me-auto">
-            <Link to="/">
+            <Link to="/" className="nav-link">
               <Nav.Link href="#home">Home</Nav.Link>
             </Link>
-            <Link to="/result">
+            <Link to="/result" className="nav-link">
               <Nav.Link href="#result">Result</Nav.Link>
             </Link>
           </Nav>
-          <Link to="/login">
-            <Button variant="outline-light">Sign-in</Button>
-          </Link>
+          {signed ? (
+            <Link to="/login">
+              <Button variant="outline-light">Sign-in</Button>
+            </Link>
+          ) : (
+            <div className="welcome-text">
+              <h5 className="hello-text">Hello {username}</h5>
+              <Link
+                to="/"
+                onClick={() => {
+                  setSigned(!signed);
+                }}
+                className="out-text"
+              >
+                Sign Out
+              </Link>
+            </div>
+          )}
         </Container>
       </Navbar>
     </>

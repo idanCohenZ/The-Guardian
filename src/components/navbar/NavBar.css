@@ -6,3 +6,26 @@
   text-decoration: none;
   color: white;
 }
+
+.navbar-logo {
+  height: 45px;
+  margin-right: 5px;
+}
+.welcome-text {
+  color: #fff;
+  display: flex;
+  padding-bottom: 0.5rem;
+  align-items: center;
+  height: 100%;
+}
+.hello-text {
+  padding-right: 1rem;
+}
+
+.out-text {
+  align-items: center;
+  padding-bottom: 0.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}

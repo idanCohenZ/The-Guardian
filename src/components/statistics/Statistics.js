@@ -4,12 +4,11 @@ import "./Statistics.css";
 function Statistics() {
   return (
     <>
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+      <img
+        className="stat-img"
+        src="/images/security-statistics.jpg"
+        alt="security-statistics"
       />
-
       <div class="container">
         <div class="row row-container">
           <div class="col-lg-2 col-sm-4">
@@ -21,9 +20,9 @@ function Statistics() {
               <div class="circle-tile-content dark-blue">
                 <div class="circle-tile-description text-faded"> Posts</div>
                 <div class="circle-tile-number text-faded ">265</div>
-                <a class="circle-tile-footer" href="#">
+                <div class="circle-tile-footer">
                   More Info <i class="fa fa-chevron-circle-right"></i>
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -35,10 +34,10 @@ function Statistics() {
               </div>
               <div class="circle-tile-content red">
                 <div class="circle-tile-description text-faded">LOCATIONS</div>
-                <div class="circle-tile-number text-faded ">10</div>
-                <a className="circle-tile-footer" href="#">
+                <div class="circle-tile-number text-faded ">-</div>
+                <div className="circle-tile-footer">
                   More Info <i class="fa fa-chevron-circle-right"></i>
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -54,10 +53,10 @@ function Statistics() {
                   {" "}
                   PERSONAL DATA
                 </div>
-                <div class="circle-tile-number text-faded ">17</div>
-                <a class="circle-tile-footer" href="#">
+                <div class="circle-tile-number text-faded ">-</div>
+                <div class="circle-tile-footer">
                   More Info <i class="fa fa-chevron-circle-right"></i>
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -72,10 +71,10 @@ function Statistics() {
                   {" "}
                   ACTIVITIES
                 </div>
-                <div class="circle-tile-number text-faded ">36</div>
-                <a class="circle-tile-footer" href="#">
+                <div class="circle-tile-number text-faded ">-</div>
+                <div class="circle-tile-footer">
                   More Info <i class="fa fa-chevron-circle-right"></i>
-                </a>
+                </div>
               </div>
             </div>
           </div>
