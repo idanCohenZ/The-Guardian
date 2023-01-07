@@ -1,7 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import React, { useContext } from "react";
 import LoginContext from "../../context/LoginContext";
@@ -31,11 +30,7 @@ function ColorSchemesExample() {
               <Nav.Link href="#result">Result</Nav.Link>
             </Link>
           </Nav>
-          {signed ? (
-            <Link to="/login">
-              <Button variant="outline-light">Sign-in</Button>
-            </Link>
-          ) : (
+          {signed && (
             <div className="welcome-text">
               <h5 className="hello-text">Hello {username}</h5>
               <Link

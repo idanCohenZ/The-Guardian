@@ -7,15 +7,26 @@ import { setupInsta } from "../../utils/https";
 import { Link } from "react-router-dom";
 
 function Login() {
-  const { signed, setSigned, setUsername, username } = useContext(LoginContext);
+  const { signed, setSigned, setUsername, username, setAllPosts } =
+    useContext(LoginContext);
+  const fetchData = () => {
+    fetch("http://localhost:8000/posts")
+      .then((res) => res.json())
+      .then((posts) => {
+        setAllPosts(posts.data);
+      });
+  };
 
   const handleClick = () => {
-    // const res = getToken();
-    // console.log(res);
     console.log(username);
-    setupInsta();
     setSigned(!signed);
-    // console.log(user);
+    if (!signed) {
+      fetchData();
+      // setAllPosts(allPosts);
+    } else {
+      setAllPosts([]);
+    }
+    setupInsta();
   };
 
   return (

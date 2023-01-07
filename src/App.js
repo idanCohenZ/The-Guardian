@@ -8,20 +8,27 @@ import Signin from "./pages/Signin";
 import LoginContext from "./context/LoginContext";
 
 function App() {
+  const [allPosts, setAllPosts] = useState([]);
   const [username, setUsername] = useState("");
   const [signed, setSigned] = useState(false);
 
   return (
     <>
       <LoginContext.Provider
-        value={{ setSigned, signed: signed, setUsername, username: username }}
+        value={{
+          setSigned,
+          signed: signed,
+          setUsername,
+          username: username,
+          setAllPosts,
+        }}
       >
         <Router>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="login" element={<Signin />} />
-            <Route path="result" element={<Result />} />
+            <Route path="result" element={<Result allPosts={allPosts} />} />
           </Routes>
         </Router>
       </LoginContext.Provider>

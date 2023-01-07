@@ -1,10 +1,10 @@
 import React from "react";
 import Statistics from "../components/statistics/Statistics";
 
-function Result() {
+function Result(props) {
   return (
     <>
-      <Statistics />
+      <Statistics allPosts={props.allPosts} />
     </>
   );
 }

@@ -1,7 +1,6 @@
-import React from "react";
 import "./Statistics.css";
 
-function Statistics() {
+function Statistics(props) {
   return (
     <>
       <img
@@ -19,7 +18,9 @@ function Statistics() {
 
               <div class="circle-tile-content dark-blue">
                 <div class="circle-tile-description text-faded"> Posts</div>
-                <div class="circle-tile-number text-faded ">265</div>
+                <div class="circle-tile-number text-faded ">
+                  {props.allPosts.length}
+                </div>
                 <div class="circle-tile-footer">
                   More Info <i class="fa fa-chevron-circle-right"></i>
                 </div>
