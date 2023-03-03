@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 function Login() {
   const { signed, setSigned, setUsername, username, setAllPosts } =
     useContext(LoginContext);
+
   const fetchData = () => {
     fetch("http://localhost:8000/posts")
       .then((res) => res.json())
