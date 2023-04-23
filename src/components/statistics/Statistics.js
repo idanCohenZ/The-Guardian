@@ -16,14 +16,14 @@ function Statistics(props) {
                 <i class="fa fa-users fa-fw fa-3x"></i>
               </div>
 
-              <div class="circle-tile-content dark-blue">
+              <div class="circle-tile-content dark-blue posts-number">
                 <div class="circle-tile-description text-faded"> Posts</div>
                 <div class="circle-tile-number text-faded ">
                   {props.allPosts.length}
                 </div>
-                <div class="circle-tile-footer">
+                {/* <div class="circle-tile-footer">
                   More Info <i class="fa fa-chevron-circle-right"></i>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

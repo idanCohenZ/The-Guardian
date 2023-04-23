@@ -7,8 +7,8 @@ export async function setupInsta() {
   window.open(url, "_blank").focus();
 }
 
-export async function getPosts(username) {
-  const response = await axios.get("http://localhost:8000/posts");
-  const posts = response.data.data;
-  return posts;
+export async function getAnalyze(userId) {
+  const response = await axios.post("http://localhost:8000/analyze", userId);
+  const result = response.data;
+  return result;
 }

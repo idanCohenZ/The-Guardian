@@ -33,6 +33,9 @@
 .circle-tile-content {
   padding-top: 50px;
 }
+.posts-number {
+  height: 155px;
+}
 .circle-tile-number {
   font-size: 26px;
   font-weight: 700;

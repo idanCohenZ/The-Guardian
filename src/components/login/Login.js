@@ -3,31 +3,33 @@ import "./Login.css";
 import LoginContext from "../../context/LoginContext";
 // import Button from "react-bootstrap/Button";
 // import Modal from "react-bootstrap/Modal";
-import { setupInsta } from "../../utils/https";
+import { getAnalyze } from "../../utils/https";
 import { Link } from "react-router-dom";
 
 function Login() {
   const { signed, setSigned, setUsername, username, setAllPosts } =
     useContext(LoginContext);
 
-  const fetchData = () => {
-    fetch("http://localhost:8000/posts")
-      .then((res) => res.json())
-      .then((posts) => {
-        setAllPosts(posts.data);
-      });
-  };
+  // const fetchData = () => {
+  //   fetch("http://localhost:8000/posts")
+  //     .then((res) => res.json())
+  //     .then((posts) => {
+  //       setAllPosts(posts.data);
+  //     });
+  // };
 
   const handleClick = () => {
     console.log(username);
-    setSigned(!signed);
     if (!signed) {
-      fetchData();
+      // fetchData();
+      getAnalyze(username);
+      setSigned(!signed);
       // setAllPosts(allPosts);
     } else {
-      setAllPosts([]);
+      // setAllPosts([]);
+      alert("You need to logout first!");
     }
-    setupInsta();
+    // setupInsta();
   };
 
   return (

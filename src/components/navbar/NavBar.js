@@ -7,7 +7,7 @@ import LoginContext from "../../context/LoginContext";
 import "./NavBar.css";
 
 function ColorSchemesExample() {
-  const { signed, setSigned, username } = useContext(LoginContext);
+  const { signed, setSigned } = useContext(LoginContext);
   return (
     <>
       <Navbar bg="dark" variant="dark" fixed="top">
@@ -32,7 +32,7 @@ function ColorSchemesExample() {
           </Nav>
           {signed && (
             <div className="welcome-text">
-              <h5 className="hello-text">Hello {username}</h5>
+              {/* <h5 className="hello-text">Hello {username}</h5> */}
               <Link
                 to="/"
                 onClick={() => {
