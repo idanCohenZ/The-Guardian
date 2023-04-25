@@ -5,11 +5,12 @@
 .nav-link {
   text-decoration: none;
   color: white;
+  padding: 0rem;
 }
 
 .navbar-logo {
-  height: 45px;
-  margin-right: 5px;
+  height: 60px;
+  /* margin-right: 5px; */
 }
 .welcome-text {
   color: #fff;

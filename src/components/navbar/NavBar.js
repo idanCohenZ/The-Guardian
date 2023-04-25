@@ -15,11 +15,11 @@ function ColorSchemesExample() {
           <Link to="/" className="nav-link">
             <Navbar.Brand href="#home">
               <img
-                src="/images/logo.jpg"
+                src="/images/logo.png"
                 className="navbar-logo"
                 alt="logo.jpg"
               />
-              GUARDIEN
+              {/* THE GUARDIEN */}
             </Navbar.Brand>
           </Link>
           <Nav className="me-auto">
