@@ -4,7 +4,7 @@ import Statistics from "../components/statistics/Statistics";
 function Result(props) {
   return (
     <>
-      <Statistics allPosts={props.allPosts} />
+      <Statistics data={props.data} />
     </>
   );
 }

@@ -9,7 +9,12 @@ import LoginContext from "./context/LoginContext";
 import FaceDetection from "./components/statistics/faceDetection/FaceDetection";
 
 function App() {
-  const [allPosts, setAllPosts] = useState([]);
+  const [allPosts, setAllPosts] = useState({
+    posts: 0,
+    relatives: [],
+    locations: [],
+    activities: [],
+  });
   const [username, setUsername] = useState("");
   const [signed, setSigned] = useState(false);
   const faces = [
@@ -26,33 +31,37 @@ function App() {
     { id: 11, image: "images/test3.jpeg", freq: 3 },
     { id: 12, image: "images/test4.jpeg", freq: 1 },
   ];
-  return (
-    <>
-      <FaceDetection faces={faces} />
-    </>
-  );
   // return (
   //   <>
-  //     <LoginContext.Provider
-  //       value={{
-  //         setSigned,
-  //         signed: signed,
-  //         setUsername,
-  //         username: username,
-  //         setAllPosts,
-  //       }}
-  //     >
-  //       <Router>
-  //         <Navbar />
-  //         <Routes>
-  //           <Route path="/" element={<Home />} />
-  //           <Route path="login" element={<Signin />} />
-  //           <Route path="result" element={<Result allPosts={allPosts} />} />
-  //         </Routes>
-  //       </Router>
-  //     </LoginContext.Provider>
+  //     <FaceDetection faces={faces} />
   //   </>
   // );
+  return (
+    <>
+      <LoginContext.Provider
+        value={{
+          setSigned,
+          signed: signed,
+          setUsername,
+          username: username,
+          setAllPosts,
+        }}
+      >
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="login" element={<Signin />} />
+            <Route path="result" element={<Result data={allPosts} />} />
+            <Route
+              path="face-detection"
+              element={<FaceDetection faces={faces} />}
+            />
+          </Routes>
+        </Router>
+      </LoginContext.Provider>
+    </>
+  );
 }
 
 export default App;

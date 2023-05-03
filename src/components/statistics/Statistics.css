@@ -36,6 +36,14 @@
 .posts-number {
   height: 155px;
 }
+.statistics-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+.statistics-link:hover {
+  text-decoration: none;
+  color: white;
+}
 .circle-tile-number {
   font-size: 26px;
   font-weight: 700;

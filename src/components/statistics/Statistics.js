@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import "./Statistics.css";
 
 function Statistics(props) {
+  const analyzed_data = props.data;
   return (
     <>
       <img
@@ -19,7 +21,7 @@ function Statistics(props) {
               <div class="circle-tile-content dark-blue posts-number">
                 <div class="circle-tile-description text-faded"> Posts</div>
                 <div class="circle-tile-number text-faded ">
-                  {props.allPosts.length}
+                  {analyzed_data.posts}
                 </div>
                 {/* <div class="circle-tile-footer">
                   More Info <i class="fa fa-chevron-circle-right"></i>
@@ -34,10 +36,14 @@ function Statistics(props) {
                 <i class="fa fa-users fa-fw fa-3x"></i>
               </div>
               <div class="circle-tile-content red">
-                <div class="circle-tile-description text-faded">LOCATIONS</div>
-                <div class="circle-tile-number text-faded ">-</div>
+                <div class="circle-tile-description text-faded">RELATIVES</div>
+                <div class="circle-tile-number text-faded ">
+                  {analyzed_data.relatives.length}
+                </div>
                 <div className="circle-tile-footer">
-                  More Info <i class="fa fa-chevron-circle-right"></i>
+                  <Link to="/face-detection" className="statistics-link">
+                    More Info <i class="fa fa-chevron-circle-right"></i>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -50,11 +56,10 @@ function Statistics(props) {
               </div>
 
               <div class="circle-tile-content orange">
-                <div class="circle-tile-description text-faded">
-                  {" "}
-                  PERSONAL DATA
+                <div class="circle-tile-description text-faded"> LOCATIONS</div>
+                <div class="circle-tile-number text-faded ">
+                  {analyzed_data.locations.length}
                 </div>
-                <div class="circle-tile-number text-faded ">-</div>
                 <div class="circle-tile-footer">
                   More Info <i class="fa fa-chevron-circle-right"></i>
                 </div>
@@ -72,7 +77,9 @@ function Statistics(props) {
                   {" "}
                   ACTIVITIES
                 </div>
-                <div class="circle-tile-number text-faded ">-</div>
+                <div class="circle-tile-number text-faded ">
+                  {analyzed_data.activities.length}
+                </div>
                 <div class="circle-tile-footer">
                   More Info <i class="fa fa-chevron-circle-right"></i>
                 </div>
