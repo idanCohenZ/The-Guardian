@@ -8,7 +8,7 @@ function FaceDetection(props) {
     <>
       <img
         className="backgroung-face-image"
-        src="./images/backgroud-face.jpg"
+        src="/images/backgroud-face.jpg"
         alt="backgroung face page"
       />
       <div className="face-cards">
