@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap");
+
+.location-cards {
+  padding: 2rem 4rem;
+  background: transparent;
+  /* min-height: 100vh; */
+}
+
+.location-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.location-wrapper {
+  margin: 50px 0 45px;
+}
+
+.backgroung-locations-image {
+  position: fixed;
+  /* z-index: -1; */
+  width: 100vw;
+}
+
+.single-location {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 600px;
+  height: 150px;
+  background-color: rgb(11, 70, 118);
+  margin-bottom: 10px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.text-location {
+  font-size: 20px;
+  color: aliceblue;
+  font-family: "Saira Condensed", sans-serif;
+}

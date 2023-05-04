@@ -30,7 +30,13 @@ function ColorSchemesExample() {
               <Nav.Link href="#result">Result</Nav.Link>
             </Link>
           </Nav>
-          {signed && (
+          {!signed ? (
+            <Link to="/login">
+              <button type="button" className="btn btn-outline-light">
+                Login
+              </button>
+            </Link>
+          ) : (
             <div className="welcome-text">
               {/* <h5 className="hello-text">Hello {username}</h5> */}
               <Link

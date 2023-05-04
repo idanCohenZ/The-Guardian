@@ -7,6 +7,8 @@ import Result from "./pages/Result";
 import Signin from "./pages/Signin";
 import LoginContext from "./context/LoginContext";
 import FaceDetection from "./components/statistics/faceDetection/FaceDetection";
+import Labels from "./components/statistics/labels/Labels";
+import Locations from "./components/statistics/locations/Locations";
 
 function App() {
   const [username, setUsername] = useState("");
@@ -25,11 +27,25 @@ function App() {
     { id: 11, image: "/images/test3.jpeg", freq: 3 },
     { id: 12, image: "/images/test4.jpeg", freq: 1 },
   ];
+  const locations = [
+    { id: 1, location: "ben gurion", date: "22/4/2022" },
+    { id: 2, location: "library", date: "22/3/2022" },
+    { id: 3, location: "sapir collage", date: "22/8/2022" },
+    { id: 4, location: "ben gurion", date: "22/4/2022" },
+    { id: 5, location: "library", date: "22/3/2022" },
+    { id: 6, location: "sapir collage", date: "22/8/2022" },
+    { id: 7, location: "ben gurion", date: "22/4/2022" },
+    { id: 8, location: "library", date: "22/3/2022" },
+    { id: 9, location: "sapir collage", date: "22/8/2022" },
+    { id: 10, location: "ben gurion", date: "22/4/2022" },
+    { id: 11, location: "library", date: "22/3/2022" },
+    { id: 12, location: "sapir collage", date: "22/8/2022" },
+  ];
   const [allPosts, setAllPosts] = useState({
     posts: 0,
     relatives: faces,
-    locations: [],
-    activities: [],
+    locations: locations,
+    labels: [],
   });
   // return (
   //   <>
@@ -52,11 +68,21 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="login" element={<Signin />} />
-            <Route path="result" element={<Result data={allPosts} />} />
-            <Route
-              path="result/face-detection"
-              element={<FaceDetection faces={allPosts.relatives} />}
-            />
+            <Route path="result">
+              <Route index={true} element={<Result data={allPosts} />} />
+              <Route
+                path="face-detection"
+                element={<FaceDetection faces={allPosts.relatives} />}
+              />
+              <Route
+                path="locations"
+                element={<Locations locations={allPosts.locations} />}
+              />
+              <Route
+                path="labels"
+                element={<Labels labels={allPosts.labels} />}
+              />
+            </Route>
           </Routes>
         </Router>
       </LoginContext.Provider>

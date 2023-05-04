@@ -42,11 +42,11 @@ function Statistics(props) {
                 <div className="circle-tile-number text-faded ">
                   {analyzed_data.relatives.length}
                 </div>
-                <div className="circle-tile-footer">
-                  <Link to="/result/face-detection" className="statistics-link">
+                <Link to="/result/face-detection" className="statistics-link">
+                  <div className="circle-tile-footer">
                     More Info <i className="fa fa-chevron-circle-right"></i>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -65,9 +65,11 @@ function Statistics(props) {
                 <div className="circle-tile-number text-faded ">
                   {analyzed_data.locations.length}
                 </div>
-                <div className="circle-tile-footer">
-                  More Info <i className="fa fa-chevron-circle-right"></i>
-                </div>
+                <Link to="/result/locations" className="statistics-link">
+                  <div className="circle-tile-footer">
+                    More Info <i className="fa fa-chevron-circle-right"></i>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -80,14 +82,16 @@ function Statistics(props) {
               <div className="circle-tile-content purple">
                 <div className="circle-tile-description text-faded">
                   {" "}
-                  ACTIVITIES
+                  LABELS
                 </div>
                 <div className="circle-tile-number text-faded ">
-                  {analyzed_data.activities.length}
+                  {analyzed_data.labels.length}
                 </div>
-                <div className="circle-tile-footer">
-                  More Info <i className="fa fa-chevron-circle-right"></i>
-                </div>
+                <Link to="/result/labels" className="statistics-link">
+                  <div className="circle-tile-footer">
+                    More Info <i className="fa fa-chevron-circle-right"></i>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
