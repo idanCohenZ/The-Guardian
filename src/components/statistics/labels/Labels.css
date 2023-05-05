@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+.our-team-main {
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  border-bottom: 5px #323233 solid;
+  background: rgb(85, 120, 201);
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+  margin-bottom: 28px;
+}
+
+.our-team-main img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  width: 90px;
+}
+
+.our-team-main h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.our-team-main p {
+  margin-bottom: 0;
+}
+
+.team-back {
+  font-family: "Roboto Slab", serif;
+  color: white;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  padding: 5px 15px 0 15px;
+  text-align: center;
+  background: rgb(85, 120, 201);
+}
+
+.team-front {
+  font-family: "Roboto Slab", serif;
+  color: white;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 10;
+  background: rgb(85, 120, 201);
+
+  padding: 15px;
+  bottom: 0px;
+  transition: all 0.5s ease;
+}
+
+.our-team-main:hover .team-front {
+  bottom: -200px;
+  transition: all 0.5s ease;
+}
+
+.our-team-main:hover {
+  border-color: #777;
+  transition: 0.5s;
+}
+
+/*our-team-main*/
+.labels-cards {
+  width: 100%;
+  padding-top: 1%;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  /* padding: 2rem 4rem; */
+  background: transparent;
+  /* min-height: 100vh; */
+}
+
+.labels-container {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.labels-wrapper {
+  margin: 50px 0 45px;
+}
+
+.backgroung-labels-image {
+  background-color: rgb(49, 56, 72);
+  position: fixed;
+  /* z-index: -1; */
+  width: 100vw;
+}
+
+.label-header {
+  padding-top: 8%;
+  color: white;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}

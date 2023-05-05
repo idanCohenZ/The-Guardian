@@ -9,6 +9,7 @@ import LoginContext from "./context/LoginContext";
 import FaceDetection from "./components/statistics/faceDetection/FaceDetection";
 import Labels from "./components/statistics/labels/Labels";
 import Locations from "./components/statistics/locations/Locations";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [username, setUsername] = useState("");
@@ -41,11 +42,32 @@ function App() {
     { id: 11, location: "library", date: "22/3/2022" },
     { id: 12, location: "sapir collage", date: "22/8/2022" },
   ];
+  const cards = [
+    { string: "Marines ", frequency: 5 },
+    { string: "Water", frequency: 2 },
+    { string: "Sky", frequency: 4 },
+    { string: "Sky", frequency: 4 },
+    { string: "Sky", frequency: 4 },
+    { string: "Sky", frequency: 4 },
+    { string: "Smile", frequency: 5 },
+    { string: "Water", frequency: 2 },
+    { string: "Sky", frequency: 4 },
+    { string: "Sky", frequency: 4 },
+    { string: "Sky", frequency: 4 },
+    { string: "Sky", frequency: 4 },
+    { string: "Smile", frequency: 5 },
+    { string: "Water", frequency: 2 },
+    { string: "Sky", frequency: 4 },
+    { string: "Sky", frequency: 4 },
+    { string: "Sky", frequency: 4 },
+    { string: "Sky", frequency: 4 },
+  ];
+
   const [allPosts, setAllPosts] = useState({
     posts: 0,
     relatives: faces,
     locations: locations,
-    labels: [],
+    labels: cards,
   });
   // return (
   //   <>
