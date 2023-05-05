@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import "./Login.css";
 import LoginContext from "../../context/LoginContext";
-// import Button from "react-bootstrap/Button";
-// import Modal from "react-bootstrap/Modal";
 import { getAnalyze } from "../../utils/https";
 import { Link } from "react-router-dom";
 

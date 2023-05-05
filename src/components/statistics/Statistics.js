@@ -17,19 +17,14 @@ function Statistics(props) {
               <div className="circle-tile-heading dark-blue">
                 <i className="fa fa-users fa-fw fa-3x"></i>
               </div>
-
               <div className="circle-tile-content dark-blue posts-number">
                 <div className="circle-tile-description text-faded"> Posts</div>
                 <div className="circle-tile-number text-faded ">
                   {analyzed_data.posts}
                 </div>
-                {/* <div className="circle-tile-footer">
-                  More Info <i className="fa fa-chevron-circle-right"></i>
-                </div> */}
               </div>
             </div>
           </div>
-
           <div className="col-lg-2 col-sm-4">
             <div className="circle-tile ">
               <div className="circle-tile-heading red">

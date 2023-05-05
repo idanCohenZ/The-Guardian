@@ -11,6 +11,7 @@ function FaceDetection(props) {
         src="/images/backgroud-face.jpg"
         alt="backgroung face page"
       />
+      <h1 className="face-header">Relatives</h1>
       <div className="face-cards">
         <div className="face-detection-container">
           <div className="face-wrapper">

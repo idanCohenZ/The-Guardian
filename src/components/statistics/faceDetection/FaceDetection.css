@@ -1,12 +1,10 @@
 .face-cards {
-  padding: 2rem 4rem;
+  padding: 0rem 4rem;
   background: transparent;
-  /* min-height: 100vh; */
 }
 
 .backgroung-face-image {
   position: fixed;
-  /* z-index: -1; */
   width: 100vw;
 }
 
@@ -23,13 +21,13 @@
 }
 
 .face-wrapper {
-  margin: 50px 0 45px;
+  margin: 30px 0 45px;
 }
 
 .relatives-table {
   margin-bottom: 24px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   text-align: center;
   padding: 0px;
   flex: 1;
@@ -42,8 +40,6 @@
   display: flex;
   flex-direction: column;
   background-color: rgb(15, 154, 188);
-  /* overflow: hidden; */
-  /* grid-template-columns: repeat(5, 1fr); */
   text-align: center;
   flex: 1;
   width: 200px;
@@ -72,4 +68,40 @@
 .face-image {
   border-radius: 10px;
   max-width: 400px;
+}
+
+.face-header {
+  padding-top: 100px;
+  -webkit-text-stroke: 2px black;
+  font-size: 50px;
+  color: white;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 1650px) {
+  .relatives-table {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .relatives-table {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .relatives-table {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .relatives-table {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .relatives-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

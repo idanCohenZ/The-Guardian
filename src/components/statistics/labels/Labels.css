@@ -95,7 +95,9 @@
 }
 
 .label-header {
-  padding-top: 8%;
+  padding-top: 100px;
+  -webkit-text-stroke: 2px black;
+  font-size: 50px;
   color: white;
   z-index: 1;
   position: relative;

@@ -69,11 +69,7 @@ function App() {
     locations: locations,
     labels: cards,
   });
-  // return (
-  //   <>
-  //     <FaceDetection faces={faces} />
-  //   </>
-  // );
+
   return (
     <>
       <LoginContext.Provider

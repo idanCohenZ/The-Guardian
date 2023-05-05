@@ -10,6 +10,7 @@ function Locations(props) {
         alt="backgroung-locations"
         className="backgroung-locations-image"
       />
+      <h1 className="location-header">Locations</h1>
       <div className="location-cards">
         <div className="location-container">
           <div className="location-wrapper">

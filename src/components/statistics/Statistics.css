@@ -6,14 +6,13 @@
   z-index: -1;
 }
 .row-container {
+  padding-top: 10%;
   justify-content: center;
   align-items: center;
   justify-items: center;
 }
 .circle-tile {
   margin-top: 50%;
-
-  /* left: 50%; */
   margin-bottom: 15px;
   text-align: center;
 }

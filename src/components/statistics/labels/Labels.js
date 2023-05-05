@@ -10,7 +10,7 @@ function Labels({ labels }) {
         alt="backgroung lables page"
       />
 
-      <h1 className="label-header">Labels:</h1>
+      <h1 className="label-header">Labels</h1>
       <div className="labels-cards">
         <div className="labels-container">
           <div className="row labels-wrapper">
@@ -31,7 +31,6 @@ function Card({ label }) {
         <div className="team-front">
           <h3>{label.string}</h3>
         </div>
-
         <div className="team-back">
           <span>Frequency: {label.frequency}</span>
         </div>
