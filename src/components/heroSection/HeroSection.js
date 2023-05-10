@@ -9,19 +9,14 @@ function HeroSection() {
   const { signed } = useContext(LoginContext);
 
   const handleClick = () => {
-    // console.log(username);
-    // setSigned(!signed);
     if (!signed) {
-      // fetchData();
       setupInsta();
       navigate("/login");
-      // setAllPosts(allPosts);
     } else {
-      // setAllPosts([]);
       alert("You need to logout first!");
     }
-    // setupInsta();
   };
+
   return (
     <div className="hero-container">
       <video src="/videos/video-2.mp4" autoPlay loop muted />

@@ -11,16 +11,10 @@ export async function setupInsta() {
   // window.open(url, "_blank").focus();
 }
 
-// const openNewWindow = (url, width, height) => {
-//   const left = window.screen.width / 2 - width / 2;
-//   const top = window.screen.height / 2 - height / 2;
-//   const features = `left=${left},top=${top},width=${width},height=${height}`;
-
-//   return window.open(url, "_blank", features)?.focus();
-//   };
-
 export async function getAnalyze(userId) {
-  const response = await axios.post("http://localhost:8000/analyze", userId);
+  const response = await axios.post("http://localhost:8000/analyze", {
+    userId: userId,
+  });
   const result = response.data;
   return result;
 }

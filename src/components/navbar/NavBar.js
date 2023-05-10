@@ -6,8 +6,18 @@ import React, { useContext } from "react";
 import LoginContext from "../../context/LoginContext";
 import "./NavBar.css";
 
-function ColorSchemesExample() {
-  const { signed, setSigned } = useContext(LoginContext);
+function NavBar() {
+  const { signed, setSigned, setAnalyzedData } = useContext(LoginContext);
+  const handleClick = () => {
+    setSigned(!signed);
+    setAnalyzedData({
+      posts: 0,
+      relatives: [],
+      locations: [],
+      labels: [],
+    });
+  };
+
   return (
     <>
       <Navbar bg="dark" variant="dark" fixed="top">
@@ -42,7 +52,7 @@ function ColorSchemesExample() {
               <Link
                 to="/"
                 onClick={() => {
-                  setSigned(!signed);
+                  handleClick();
                 }}
                 className="out-text"
               >
@@ -56,4 +66,4 @@ function ColorSchemesExample() {
   );
 }
 
-export default ColorSchemesExample;
+export default NavBar;

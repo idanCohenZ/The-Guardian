@@ -63,11 +63,11 @@ function App() {
     { string: "Sky", frequency: 4 },
   ];
 
-  const [allPosts, setAllPosts] = useState({
+  const [analyzedData, setAnalyzedData] = useState({
     posts: 0,
-    relatives: faces,
-    locations: locations,
-    labels: cards,
+    relatives: [],
+    locations: [],
+    labels: [],
   });
 
   return (
@@ -78,7 +78,7 @@ function App() {
           signed: signed,
           setUsername,
           username: username,
-          setAllPosts,
+          setAnalyzedData,
         }}
       >
         <Router>
@@ -87,18 +87,18 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="login" element={<Signin />} />
             <Route path="result">
-              <Route index={true} element={<Result data={allPosts} />} />
+              <Route index={true} element={<Result data={analyzedData} />} />
               <Route
                 path="face-detection"
-                element={<FaceDetection faces={allPosts.relatives} />}
+                element={<FaceDetection faces={analyzedData.relatives} />}
               />
               <Route
                 path="locations"
-                element={<Locations locations={allPosts.locations} />}
+                element={<Locations locations={analyzedData.locations} />}
               />
               <Route
                 path="labels"
-                element={<Labels labels={allPosts.labels} />}
+                element={<Labels labels={analyzedData.labels} />}
               />
             </Route>
           </Routes>

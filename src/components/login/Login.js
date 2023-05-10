@@ -2,32 +2,23 @@ import React, { useContext } from "react";
 import "./Login.css";
 import LoginContext from "../../context/LoginContext";
 import { getAnalyze } from "../../utils/https";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const { signed, setSigned, setUsername, username, setAllPosts } =
+  let navigate = useNavigate();
+  const { signed, setSigned, setUsername, username, setAnalyzedData } =
     useContext(LoginContext);
 
-  // const fetchData = () => {
-  //   fetch("http://localhost:8000/posts")
-  //     .then((res) => res.json())
-  //     .then((posts) => {
-  //       setAllPosts(posts.data);
-  //     });
-  // };
-
-  const handleClick = () => {
+  const handleClick = async () => {
     console.log(username);
     if (!signed) {
-      // fetchData();
-      getAnalyze(username);
+      const data = await getAnalyze(username);
       setSigned(!signed);
-      // setAllPosts(allPosts);
+      setAnalyzedData(data);
+      navigate("/result");
     } else {
-      // setAllPosts([]);
       alert("You need to logout first!");
     }
-    // setupInsta();
   };
 
   return (
@@ -48,17 +39,15 @@ function Login() {
                 onChange={(e) => setUsername(e.target.value)}
               />
             </div>
-            <Link to="/result">
-              <button
-                type="submit"
-                className="btn btn-primary"
-                onClick={() => {
-                  handleClick();
-                }}
-              >
-                Login
-              </button>
-            </Link>
+            <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={() => {
+                handleClick();
+              }}
+            >
+              Login
+            </button>
           </div>
         </div>
       </div>
@@ -67,39 +56,3 @@ function Login() {
 }
 
 export default Login;
-
-// function Approve({ handleClick }) {
-//   const [show, setShow] = useState(false);
-
-//   const handleClose = () => setShow(false);
-//   const handleShow = () => setShow(true);
-
-//   return (
-//     <>
-//       <button
-//         type="submit"
-//         className="btn btn-primary"
-//         onClick={() => {
-//           handleShow();
-//           handleClick();
-//         }}
-//       >
-//         Login
-//       </button>
-//       <Modal show={show} onHide={handleClose}>
-//         <Modal.Header closeButton>
-//           <Modal.Title>Modal heading</Modal.Title>
-//         </Modal.Header>
-//         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-//         <Modal.Footer>
-//           <Button variant="secondary" onClick={handleClose}>
-//             Close
-//           </Button>
-//           <Button variant="primary" onClick={handleClose}>
-//             Save Changes
-//           </Button>
-//         </Modal.Footer>
-//       </Modal>
-//     </>
-//   );
-// }
