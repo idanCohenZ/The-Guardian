@@ -15,6 +15,11 @@ export async function getAnalyze(userId) {
   const response = await axios.post("http://localhost:8000/analyze", {
     userId: userId,
   });
-  const result = response.data;
-  return result;
+  const result = response.data[0];
+  console.log(response.data[0]);
+  if (result.Status === "In-Progress") {
+    alert("Your profile's inspection is underway");
+  } else {
+    return result.data;
+  }
 }

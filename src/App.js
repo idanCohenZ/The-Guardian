@@ -12,7 +12,6 @@ import Locations from "./components/statistics/locations/Locations";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [username, setUsername] = useState("");
   const [signed, setSigned] = useState(false);
   const faces = [
     { id: 1, image: "/images/test1.jpg", freq: 15 },
@@ -76,16 +75,17 @@ function App() {
         value={{
           setSigned,
           signed: signed,
-          setUsername,
-          username: username,
           setAnalyzedData,
         }}
       >
         <Router>
-          <Navbar />
+          <Navbar posts={analyzedData.posts} />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="login" element={<Signin />} />
+            <Route
+              path="login"
+              element={<Signin signed={signed} posts={analyzedData.posts} />}
+            />
             <Route path="result">
               <Route index={true} element={<Result data={analyzedData} />} />
               <Route

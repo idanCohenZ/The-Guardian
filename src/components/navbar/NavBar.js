@@ -6,8 +6,9 @@ import React, { useContext } from "react";
 import LoginContext from "../../context/LoginContext";
 import "./NavBar.css";
 
-function NavBar() {
+function NavBar({ posts }) {
   const { signed, setSigned, setAnalyzedData } = useContext(LoginContext);
+  const loadingFlag = signed && posts !== 0;
   const handleClick = () => {
     setSigned(!signed);
     setAnalyzedData({
@@ -40,7 +41,7 @@ function NavBar() {
               <Nav.Link href="#result">Result</Nav.Link>
             </Link>
           </Nav>
-          {!signed ? (
+          {!loadingFlag ? (
             <Link to="/login">
               <button type="button" className="btn btn-outline-light">
                 Login

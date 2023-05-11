@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Login.css";
 import LoginContext from "../../context/LoginContext";
 import { getAnalyze } from "../../utils/https";
@@ -6,16 +6,21 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
   let navigate = useNavigate();
-  const { signed, setSigned, setUsername, username, setAnalyzedData } =
-    useContext(LoginContext);
+  const { signed, setSigned, setAnalyzedData } = useContext(LoginContext);
+  const [userId, setUserId] = useState("");
 
   const handleClick = async () => {
-    console.log(username);
+    console.log(userId);
     if (!signed) {
-      const data = await getAnalyze(username);
       setSigned(!signed);
-      setAnalyzedData(data);
-      navigate("/result");
+      const data = await getAnalyze(userId);
+      if (data) {
+        setAnalyzedData(data);
+        navigate("/result");
+      } else {
+        setSigned(false);
+        // navigate("/");
+      }
     } else {
       alert("You need to logout first!");
     }
@@ -36,7 +41,7 @@ function Login() {
                 className="form-control"
                 id="inputEmail"
                 placeholder="Username"
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setUserId(e.target.value)}
               />
             </div>
             <button
