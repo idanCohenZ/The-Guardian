@@ -20,6 +20,7 @@ function FaceDetection(props) {
                 <FaceItem
                   key={user_face.id}
                   name_of_class="user-face"
+                  name_of_class_img="user-face-img"
                   image={user_face.image}
                   message="is that you?"
                 />
@@ -37,6 +38,7 @@ function FaceDetection(props) {
                   <FaceItem
                     key={relative.id}
                     name_of_class="relative-face"
+                    name_of_class_img="relative-face-img"
                     image={relative.image}
                     message={message}
                   />
@@ -53,7 +55,11 @@ function FaceDetection(props) {
 function FaceItem(props) {
   return (
     <li className={`single-face-container ${props.name_of_class}`}>
-      <img className="face-image" src={props.image} alt="face" />
+      <img
+        className={`face-image ${props.name_of_class_img}`}
+        src={props.image}
+        alt="face"
+      />
       <p className="face-text">{props.message}</p>
     </li>
   );
