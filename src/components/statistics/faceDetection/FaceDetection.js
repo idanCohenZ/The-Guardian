@@ -30,9 +30,9 @@ function FaceDetection(props) {
               {relatives.map((relative) => {
                 let message;
                 if (relative.freq === 1) {
-                  message = "This realtive appears only once";
+                  message = "This reltive appears only once";
                 } else {
-                  message = "This realtive appear " + relative.freq + " times";
+                  message = "This reltive appear " + relative.freq + " times";
                 }
                 return (
                   <FaceItem
