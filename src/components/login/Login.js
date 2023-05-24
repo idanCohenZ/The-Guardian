@@ -10,7 +10,6 @@ function Login() {
   const [userId, setUserId] = useState("");
 
   const handleClick = async () => {
-    console.log(userId);
     if (!signed) {
       setSigned(!signed);
       const data = await getAnalyze(userId);
@@ -19,7 +18,6 @@ function Login() {
         navigate("/result");
       } else {
         setSigned(false);
-        // navigate("/");
       }
     } else {
       alert("You need to logout first!");

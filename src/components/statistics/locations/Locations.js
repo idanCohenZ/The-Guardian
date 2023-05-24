@@ -14,15 +14,17 @@ function Locations(props) {
       <div className="location-cards">
         <div className="location-container">
           <div className="location-wrapper">
-            {locations.map((location) => {
-              return (
-                <SingleLocation
-                  key={location.id}
-                  location={location.location}
-                  date={location.date}
-                />
-              );
-            })}
+            <ul className="location-table">
+              {locations.map((location) => {
+                return (
+                  <SingleLocation
+                    key={location.id}
+                    location={location.location}
+                    date={location.date}
+                  />
+                );
+              })}
+            </ul>
           </div>
         </div>
       </div>

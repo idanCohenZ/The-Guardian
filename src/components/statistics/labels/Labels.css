@@ -7,7 +7,7 @@
   border-bottom: 5px #323233 solid;
   background: rgb(85, 120, 201);
   text-align: center;
-  border-radius: 10px;
+  border-radius: 100%;
   overflow: hidden;
   position: relative;
   transition: 0.5s;
