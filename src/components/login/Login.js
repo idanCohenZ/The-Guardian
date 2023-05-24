@@ -32,7 +32,7 @@ function Login() {
         <div className="main-div">
           <div className="panel">
             <h2>Login</h2>
-            <p>Please enter your username from instagram</p>
+            <p>Please enter the code from instagram</p>
           </div>
           <div id="Login">
             <div className="form-group">
@@ -40,7 +40,7 @@ function Login() {
                 type="email"
                 className="form-control"
                 id="inputEmail"
-                placeholder="Username"
+                placeholder="USER-ID"
                 onChange={(e) => setUserId(e.target.value)}
               />
             </div>

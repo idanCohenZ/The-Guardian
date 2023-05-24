@@ -8,7 +8,6 @@ export async function setupInsta() {
   const top = window.screen.height / 2 - 600 / 2;
   const features = `left=${left},top=${top},width=${600},height=${600}`;
   window.open(url, "_blank", features)?.focus();
-  // window.open(url, "_blank").focus();
 }
 
 export async function getAnalyze(userId) {
@@ -16,7 +15,6 @@ export async function getAnalyze(userId) {
     userId: userId,
   });
   const result = response.data[0];
-  console.log(response.data[0]);
   if (result.Status === "In-Progress") {
     alert("Your profile's inspection is underway");
   } else {

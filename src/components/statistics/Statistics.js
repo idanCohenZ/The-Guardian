@@ -16,7 +16,6 @@ function Statistics(props) {
             <div className="circle-tile ">
               <div className="circle-tile-heading dark-blue">
                 <i className="fa fa-instagram fa-fw fa-3x"></i>
-                {/* <i class="fa-brands fa-instagram fa-2xl"></i> */}
               </div>
               <div className="circle-tile-content dark-blue posts-number">
                 <div className="circle-tile-description text-faded"> Posts</div>
@@ -52,7 +51,6 @@ function Statistics(props) {
               <div className="circle-tile-heading orange">
                 <i className="fa fa-location-dot fa-fw fa-3x"></i>
               </div>
-              {/* <i class="fa-regular fa-location-dot"></i> */}
               <div className="circle-tile-content orange">
                 <div className="circle-tile-description text-faded">
                   {" "}
@@ -73,9 +71,7 @@ function Statistics(props) {
             <div className="circle-tile ">
               <div className="circle-tile-heading purple">
                 <i className="fa fa-tag fa-fw fa-3x"></i>
-                {/* <i class="fa-light fa-tag"></i> */}
               </div>
-
               <div className="circle-tile-content purple">
                 <div className="circle-tile-description text-faded">
                   {" "}

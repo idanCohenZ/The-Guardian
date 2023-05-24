@@ -49,7 +49,6 @@ function NavBar({ posts }) {
             </Link>
           ) : (
             <div className="welcome-text">
-              {/* <h5 className="hello-text">Hello {username}</h5> */}
               <Link
                 to="/"
                 onClick={() => {

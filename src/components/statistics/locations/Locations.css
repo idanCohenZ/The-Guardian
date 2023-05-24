@@ -3,7 +3,6 @@
 .location-cards {
   padding: 0rem 4rem;
   background: transparent;
-  /* min-height: 100vh; */
 }
 
 .location-container {
@@ -19,7 +18,6 @@
 
 .backgroung-locations-image {
   position: fixed;
-  /* z-index: -1; */
   width: 100vw;
 }
 

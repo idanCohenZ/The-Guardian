@@ -50,7 +50,6 @@
   position: relative;
   z-index: 10;
   background: rgb(85, 120, 201);
-
   padding: 15px;
   bottom: 0px;
   transition: all 0.5s ease;
@@ -72,9 +71,7 @@
   padding-top: 1%;
   padding-left: 4rem;
   padding-right: 4rem;
-  /* padding: 2rem 4rem; */
   background: transparent;
-  /* min-height: 100vh; */
 }
 
 .labels-container {
@@ -90,7 +87,6 @@
 .backgroung-labels-image {
   background-color: rgb(49, 56, 72);
   position: fixed;
-  /* z-index: -1; */
   width: 100vw;
 }
 
