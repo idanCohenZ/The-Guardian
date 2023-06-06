@@ -25,7 +25,7 @@ The client side is built using React.js and was fully desinged by us. (Myself an
 
 <br />
 
-https://github.com/Yarin96/VioREACH/assets/94289687/db28f7b6-f808-42dd-a781-a623231d9236
+https://github.com/RoiYehezkel/The-Guardian/blob/main/public/videos/preview.mp4
 
 <br />
 
