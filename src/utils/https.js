@@ -11,13 +11,18 @@ export async function setupInsta() {
 }
 
 export async function getAnalyze(userId) {
-  const response = await axios.post("http://localhost:8000/analyze", {
-    userId: userId,
-  });
-  const result = response.data[0];
-  if (result.Status === "In-Progress") {
-    alert("Your profile's inspection is underway");
-  } else {
-    return result.data;
+  try {
+    const response = await axios.post("http://localhost:8000/analyze", {
+      userId: userId,
+    });
+    const result = response.data[0];
+
+    if (result.Status === "In-Progress") {
+      alert("Your profile's inspection is underway");
+    } else {
+      return result.data;
+    }
+  } catch (err) {
+    alert("Server unavailable");
   }
 }
