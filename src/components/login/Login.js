@@ -1,13 +1,18 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./Login.css";
 import LoginContext from "../../context/LoginContext";
 import { getAnalyze } from "../../utils/https";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
+const Login = () => {
   let navigate = useNavigate();
   const { signed, setSigned, setAnalyzedData } = useContext(LoginContext);
   const [userId, setUserId] = useState("");
+  const userInputRef = useRef();
+
+  useEffect(() => {
+    userInputRef.current.focus();
+  }, []);
 
   const handleClick = async () => {
     if (!signed) {
@@ -40,6 +45,7 @@ function Login() {
                 id="inputEmail"
                 placeholder="USER-ID"
                 onChange={(e) => setUserId(e.target.value)}
+                ref={userInputRef}
               />
             </div>
             <button
@@ -56,6 +62,6 @@ function Login() {
       </div>
     </div>
   );
-}
+};
 
 export default Login;
