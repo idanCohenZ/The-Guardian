@@ -1,96 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
-
-.our-team-main {
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  border-bottom: 5px #323233 solid;
-  background: rgb(85, 120, 201);
-  text-align: center;
-  border-radius: 100%;
-  overflow: hidden;
-  position: relative;
-  transition: 0.5s;
-  margin-bottom: 28px;
+.cat-cards {
+  padding: 0rem 4rem;
 }
 
-.our-team-main img {
-  border-radius: 50%;
-  margin-bottom: 20px;
-  width: 90px;
-}
-
-.our-team-main h3 {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.our-team-main p {
-  margin-bottom: 0;
-}
-
-.team-back {
-  font-family: "Roboto Slab", serif;
-  color: white;
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 15px;
-  left: 0;
-  padding: 5px 15px 0 15px;
-  text-align: center;
-  background: rgb(85, 120, 201);
-}
-
-.team-front {
-  font-family: "Roboto Slab", serif;
-  color: white;
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: 10;
-  background: rgb(85, 120, 201);
-  padding: 15px;
-  bottom: 0px;
-  transition: all 0.5s ease;
-}
-
-.our-team-main:hover .team-front {
-  bottom: -200px;
-  transition: all 0.5s ease;
-}
-
-.our-team-main:hover {
-  border-color: #777;
-  transition: 0.5s;
-}
-
-/*our-team-main*/
-.labels-cards {
-  width: 100%;
-  padding-top: 1%;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  background: transparent;
-}
-
-.labels-container {
+.cat-container {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.labels-wrapper {
-  margin: 50px 0 45px;
+.cat-table {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
-.backgroung-labels-image {
+.backgroung-cat-image {
+  z-index: -1;
   background-color: rgb(49, 56, 72);
   position: fixed;
   width: 100vw;
 }
 
-.label-header {
+.cat-header {
   padding-top: 100px;
   -webkit-text-stroke: 2px black;
   font-size: 50px;
@@ -99,4 +30,48 @@
   position: relative;
   display: flex;
   justify-content: center;
+}
+
+.circle-container {
+  width: 170px;
+  height: 210px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+  display: flex;
+  padding: 4px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle-wrapper {
+  width: 150px;
+  height: 150px;
+}
+
+.circle-text {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 1650px) {
+  .cat-table {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .cat-table {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .cat-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .cat-table {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
