@@ -22,6 +22,17 @@ The client side is built using React.js and was fully desinged by us. (Myself an
 <br />
 
 ### Sneak Peek Images and Videos 🔎:
+![image](https://github.com/idanCohenZ/The-Guardian/assets/101664812/49cc99c8-c6f2-4261-9d6a-14171c96e91f)
+
+![image](https://github.com/idanCohenZ/The-Guardian/assets/101664812/228c23fb-d909-45d7-a5a1-d66b3103a8d2)
+
+![image](https://github.com/idanCohenZ/The-Guardian/assets/101664812/cf9f5403-e5a4-434f-8580-8028f6238541)
+
+![image](https://github.com/idanCohenZ/The-Guardian/assets/101664812/69bf117f-0f9f-42dd-bcfb-6ff2c692e2f7)
+
+
+
+
 
 <br />
 
